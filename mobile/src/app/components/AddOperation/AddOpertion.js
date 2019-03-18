@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList, Text, TextInput, View, Keyboard, Dimensions } from 'react-native';
 import { Button } from '../Button';
 import { format, log, storage } from '../../services';
-import {Balance} from "../Balance";
+import { Balance } from '../Balance';
 
 const { width, height } = Dimensions.get('window');
 

@@ -94,16 +94,27 @@ export default class Settings extends React.Component {
   }
 
   setBalanceToState(balanceText) {
-    this.setState({balance: !balanceText ? 0 : parseFloat(parseFloat(balanceText).toFixed(2))});
+    const balanceTextList = balanceText.split('.');
+
+    if (balanceTextList.length > 2) {
+      const diff = balanceTextList.length - 2;
+      balanceTextList.splice(-diff, diff);
+    }
+
+    if (balanceTextList.length > 1) {
+      balanceTextList[1] = balanceTextList[1].substr(0, 2);
+    }
+
+    this.setState({balance: balanceTextList.join('.')});
   }
 
   setBalance() {
-    if (!this.state.balance) {
+    if (!this.state.balance.length) {
       return;
     }
 
     storage.getData('db').then(db => {
-      db.balance = this.state.balance;
+      db.balance = parseFloat(this.state.balance);
       return storage.setData('db', db);
     }).then(() => {
       Keyboard.dismiss();
