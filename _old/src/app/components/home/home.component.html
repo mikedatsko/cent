@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="col">
+    <canvas id="canvas">{{ chart }}</canvas>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <table class="table table-sm table-success">
+      <thead>
+      <tr>
+        <th>Income</th>
+        <th class="text-right">$</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th>
+          Sum
+        </th>
+        <th class="text-right" [innerText]="getSum(incomeList) | currency"></th>
+      </tr>
+      <tr *ngFor="let income of incomeList">
+        <td [innerText]="income.name"></td>
+        <td class="text-right" [innerText]="income.value | currency"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <table class="table table-sm table-danger">
+      <thead>
+      <tr>
+        <th>Outcome</th>
+        <th class="text-right">$</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th>
+          Sum
+        </th>
+        <th class="text-right" [innerText]="getSum(outcomeList) | currency"></th>
+      </tr>
+      <tr *ngFor="let outcome of outcomeList">
+        <td [innerText]="outcome.name"></td>
+        <td class="text-right" [innerText]="outcome.value | currency"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{{formValue}}
+
+<div class="row">
+  <div class="col">
+    <form #addForm="ngForm" (ngSubmit)="addValue(addForm)">
+      <div class="row">
+        <div class="col">
+          <input class="form-control text-center" type="text" name="name" placeholder="Name" ngModel>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <select name="type" class="form-control" ngModel [ngModel]="'income'">
+            <option value="income">Income</option>
+            <option value="outcome">Outcome</option>
+          </select>
+        </div>
+        <div class="col">
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">$</div>
+            </div>
+            <input class="form-control text-center" type="text" name="value" placeholder="0" ngModel>
+          </div>
+        </div>
+        <div class="col">
+          <button class="btn btn-block btn-success">Add</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

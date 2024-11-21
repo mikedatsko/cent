@@ -1,0 +1,63 @@
+<div>
+  <a
+    mat-stroked-button
+    [title]="'Dashboard'"
+    [routerLink]="['/']"
+    [routerLinkActive]="['mat-primary']"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Dashboard
+  </a>
+  <a
+    mat-stroked-button
+    [title]="'Transactions'"
+    [routerLink]="['/transactions']"
+    [routerLinkActive]="['mat-primary']"
+  >
+    Transactions
+  </a>
+  <a
+    mat-stroked-button
+    [title]="'Sources'"
+    [routerLink]="['/sources']"
+    [routerLinkActive]="['mat-primary']"
+  >
+    Sources
+  </a>
+  <a
+    mat-stroked-button
+    [title]="'Categories'"
+    [routerLink]="['/categories']"
+    [routerLinkActive]="['mat-primary']"
+  >
+    Categories
+  </a>
+
+  <!-- <button mat-button [matMenuTriggerFor]="aboveMenu">Above</button>
+  <mat-menu #aboveMenu="matMenu" yPosition="above">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="belowMenu">Below</button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="beforeMenu">Before</button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="afterMenu">After</button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu> -->
+</div>
+
+<div class="page">
+  <router-outlet />
+</div>

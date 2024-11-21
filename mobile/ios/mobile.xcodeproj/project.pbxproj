@@ -56,7 +56,6 @@
 		DAC04B0516474F18A68ACCCC /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BCB86AB70554B22B7309573 /* EvilIcons.ttf */; };
 		DF7276381B6D4356862C5F31 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F431ECE7C24535944D29EE /* Feather.ttf */; };
 		EE4204887D2B4C8B8C6462AF /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1C025CBEEE4AE883CF69AF /* SimpleLineIcons.ttf */; };
-		F2611467A9644C7E9D2BA17A /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5067E2E10B498999659399 /* libRNVectorIcons.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -447,7 +446,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				F2611467A9644C7E9D2BA17A /* libRNVectorIcons.a in Frameworks */,
 				AC4B7047BB0A4617B0339F4E /* libRNLanguages.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -856,6 +854,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

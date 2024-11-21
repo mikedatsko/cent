@@ -1,0 +1,59 @@
+
+<h1>Posts</h1>
+
+<div class="posts-grid">
+{{#each posts}}
+  <div class="card post-card">
+    <div
+      style="background-image: url({{#if this.image}}/images/{{this.image}}-small.png{{else}}https://picsum.photos/id/53/300/200{{/if}});"
+      class="card-image"
+      title="{{this.title}}"
+    ></div>
+    <div class="card-body">
+      <h3 class="card-title">{{this.title}}</h3>
+      <p class="card-text">{{this.intro}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+{{/each}}
+</div>
+
+{{#each posts}}
+  <div
+    class="modal modal-lg fade"
+    id="post-content-{{this.id}}"
+    tabindex="-1"
+    aria-labelledby="post-content-{{this.id}}-label"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="post-content-{{this.id}}-label">
+            {{this.title}}
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p>{{this.intro}}</p>
+          {{{this.content}}}
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >Close</button>
+          {{! <button type="button" class="btn btn-primary">Save changes</button> }}
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
+
+<script src="/js/posts.js"></script>

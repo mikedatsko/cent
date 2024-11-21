@@ -1,0 +1,35 @@
+<h1>Config</h1>
+
+<form id="formSettings">
+  <div class="mb-3">
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each sets}}
+        <tr>
+          <td>{{ this.name }}</td>
+          <td>
+            <input
+              name="{{ this.id }}"
+              type="{{ this.type }}"
+              value="{{ this.value }}"
+              class="form-control"
+            />
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mb-3">
+    <button class="btn btn-primary">Save</button>
+  </div>
+</form>
+
+<script src="/admin/js/config.js"></script>

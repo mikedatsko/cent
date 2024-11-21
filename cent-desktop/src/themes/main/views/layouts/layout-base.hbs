@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/bootstrap.css" />
+    <link rel="stylesheet" href="/icons/bootstrap-icons.min.css" />
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/jquery.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">CENT</a>
+
+        <ul class="nav mw-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sources">Sources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/settings">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin">Admin</a>
+          </li>
+        </ui>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      {{{body}}}
+    </div>
+  </body>
+</html>

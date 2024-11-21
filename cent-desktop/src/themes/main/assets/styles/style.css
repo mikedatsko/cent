@@ -1,0 +1,43 @@
+.posts-grid {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 0;
+  gap: 0px;
+  margin: 0 -15px;
+}
+
+.posts-grid .post-card {
+  position: relative;
+  max-width: 25%;
+  border: none;
+  margin: 0 0 20px;
+}
+
+.posts-grid .post-card .card-image {
+  display: block;
+  height: 0;
+  padding-bottom: 75%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin: 0 15px;
+  border-radius: 8px;
+}
+
+.posts-grid .post-card .card-title {
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.posts-grid .post-card .card-text {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 20px;
+  height: 60px;
+  overflow: hidden;
+}
