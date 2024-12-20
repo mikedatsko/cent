@@ -1,0 +1,24 @@
+<h1>Add category</h1>
+
+<form action="/categories/add" method="post">
+  <input name="id" value="{{ id }}" type="hidden" />
+  <div class="mb-3">
+    <label for="nameFormControl" class="form-label">Name</label>
+    <input
+      name="name"
+      type="text"
+      class="form-control{{#if errorName}} is-invalid{{/if}}"
+      id="nameFormControl"
+      placeholder="Food, Car, Entertainment"
+      value="{{#if name}}{{ name }}{{/if}}"
+    />
+    {{#if errorName}}
+    <div class="invalid-feedback">
+      {{ errorName }}
+    </div>
+    {{/if}}
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary btn-sm">Add</button>
+  </div>
+</form>

@@ -1,8 +1,8 @@
 {
   "name": "cent-desktop",
-  "productName": "cent-desktop",
+  "productName": "CENT",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "CENT - Finance Management",
   "main": "src/index.js",
   "scripts": {
     "start": "NODE_ENV=development electron-forge start",
@@ -29,7 +29,7 @@
   "type": "module",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
-    "torque": "file:../../24-i-torque/torque"
+    "torque": "file:../../torquecms"
   },
   "prettier": {
     "printWidth": 80,

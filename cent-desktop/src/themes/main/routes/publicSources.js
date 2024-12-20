@@ -1,7 +1,8 @@
 import { debug } from 'torque';
 
-async function publicHome(req, res, next) {
+async function publicSources(req, res, next) {
   try {
+    debug('Sources', 'start');
     const db = req.app.get('DB');
     // const config = await db.get('config');
     // const posts = await db.get('post');
@@ -10,7 +11,7 @@ async function publicHome(req, res, next) {
 
     // const title = config.find(setting => setting.id === 'title');
 
-    res.render('publicIndex', {
+    res.render('publicSources', {
       title: 'CENT'
       // posts: posts.map((post, index) => ({
       //   num: index + 1,
@@ -28,4 +29,4 @@ async function publicHome(req, res, next) {
   }
 }
 
-export default publicHome;
+export default publicSources;

@@ -1,17 +1,23 @@
 import { debug } from 'torque';
 
-async function publicHome(req, res, next) {
+async function publicCategories(req, res, next) {
   try {
+    const { success, error, message } = req.query;
     const db = req.app.get('DB');
-    // const config = await db.get('config');
+    const categories = await db.get('category');
+    debug('categories', categories);
     // const posts = await db.get('post');
     // debug('posts', posts);
     // debug('config', config);
 
     // const title = config.find(setting => setting.id === 'title');
 
-    res.render('publicIndex', {
-      title: 'CENT'
+    res.render('publicCategories', {
+      title: 'CENT',
+      categories,
+      success: success || '',
+      error: error || '',
+      message: message || ''
       // posts: posts.map((post, index) => ({
       //   num: index + 1,
       //   id: post.id,
@@ -28,4 +34,4 @@ async function publicHome(req, res, next) {
   }
 }
 
-export default publicHome;
+export default publicCategories;
