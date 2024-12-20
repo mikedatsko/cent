@@ -2,12 +2,12 @@ import { app, BrowserWindow } from 'electron';
 import Torque from 'torque';
 import path from 'node:path';
 import * as electronSquirrelStartup from 'electron-squirrel-startup';
-import sources from './modules/sources/index.js';
-import transactions from './modules/transactions/index.js';
+// import sources from './modules/sources/index.js';
+// import transactions from './modules/transactions/index.js';
 import theme from './themes/main/index.js';
 
 const __dirname = import.meta.dirname;
-const modules = [sources, transactions];
+// const modules = [sources, transactions];
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (electronSquirrelStartup) {
@@ -26,10 +26,10 @@ const createWindow = () => {
   });
 
   // and load the index.html of the app.
-  const port = '12345';
+  const port = '12346';
   const dbPath = path.join(__dirname, '..', 'cent.db');
 
-  Torque({ port, dbPath, theme, modules });
+  Torque({ port, dbPath, theme });
   // mainWindow.loadFile(path.join(__dirname, 'index.html'));
   mainWindow.loadURL('http://localhost:' + port);
 
